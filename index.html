@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clamp Converter</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/helpers.css">
+</head>
+<body>
+    <main class="maincontainer">
+            <div class="container">
+                <h1>Clamp converter sur une base de 10px</h1>
+                <span class="containeritem"> 
+                        <h2 for="min-fs">Min Font size</h2>
+                        <span class="inputcontainer">
+                            <p class="control">    
+                                <input id="min-fs" size="10" type="text" value="1rem" class="input" placeholder="1rem" pattern="[\d.]+([Rr][Ee][Mm]|[Pp][Xx])" required="">
+                            </p>
+                            <p class="control">
+                                <a class="textresult button" data-unit="min-fs">10px</a>
+                            </p>
+                        </span>                 
+                </span>
+
+                <span class="containeritem field">
+                    <h2 for="min-vw">Min Viewport</h2>
+                    <span class="inputcontainer">
+                        <p class="control">    
+                            <input id="min-vw" size="10" type="text" value="1.25rem" class="input" placeholder="1.25rem" pattern="[\d.]+([Rr][Ee][Mm]|[Pp][Xx])" required="">
+                        </p>
+                        <p class="control">
+                            <a class="textresult button" data-unit="min-vw">10px</a>
+                        </p>
+                    </span>
+                </span>
+
+                <span class="containeritem field">
+                    <h2>Max Font Size</h2>
+                    <span class="inputcontainer">
+                        <p class="control">    
+                            <input id="max-fs" size="10" type="text" value="1rem" class="input" placeholder="1rem" pattern="[\d.]+([Rr][Ee][Mm]|[Pp][Xx])" required="">
+                        </p>
+                        <p class="control">
+                            <a class="textresult button" data-unit="max-fs">10px</a>
+                        </p>
+                    </span>
+                </span>
+                
+                <span class="containeritem field">
+                    <h2>Max Viewport</h2>
+                    <span class="inputcontainer">
+                        <p class="control">    
+                            <input id="max-vw" size="10" type="text" value="1rem" class="input" placeholder="1rem" pattern="[\d.]+([Rr][Ee][Mm]|[Pp][Xx])" required="">
+                        </p>
+                        <p class="control">
+                            <a class="textresult button" data-unit="max-vw">10px</a>
+                        </p>
+                    </span>
+                </span>
+
+                <div class="containeritem resultbox">
+                    <h2>Result</h2>
+                    <pre class="notification result" id="calc">font-size: 1.25rem;<br>font-size: clamp(1.25rem, 2.15rem + -0.75vw, 2rem);</pre>
+                </div>
+            </div>
+        </main>
+        <script src="/js/index.js"></script>
+    </body>
+    </html>
